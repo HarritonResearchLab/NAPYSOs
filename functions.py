@@ -1,7 +1,6 @@
 def Q(dates, mags, magerrs, timescale, sig_factor): 
     '''
     Parameters: 
-    
     dates: array of time values associated with observations
     mags: array of magnitude values associated with observations
     magerrs: array of errors associated with magnitudes in mags array
@@ -44,12 +43,10 @@ def Q(dates, mags, magerrs, timescale, sig_factor):
     
 def M(mags):
     '''
-    Parameters: 
-
+    Parameters:
     mags: array of magnitude values 
     
     Returns: 
-    
     m: flux-asymmetry value
     '''
     
