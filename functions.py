@@ -55,6 +55,6 @@ def M(mags):
     import numpy as np
     
     # Calculate m 
-    m = (np.mean([stats.mstats.mquantiles(mag,prob=0.9),stats.mstats.mquantiles(mag,prob=0.1)])-np.median(mag))/np.sqrt(((mag-mag.mean())**2).sum()/len(mag))
+    m = (np.mean([stats.mstats.mquantiles(mags,prob=0.9),stats.mstats.mquantiles(mags,prob=0.1)])-np.median(mags))/np.sqrt(((mags-mags.mean())**2).sum()/len(mags))
     
     return m
