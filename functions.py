@@ -5,7 +5,7 @@ def Q(dates, mags, magerrs, timescale, sig_factor):
     mags: array of magnitude values associated with observations
     magerrs: array of errors associated with magnitudes in mags array
     timescale: float representative of an object's timescale of variability
-    sig_factor: multiplied against mean magerr, should be set to 1. initially
+    sig_factor: multiplied against mean magerr, should be set to 1 initially
     
     Returns: 
     q: quasi-periodicity value
@@ -51,10 +51,12 @@ def M(mags):
     '''
     
     # Import(s)
-    from scipy import stats 
     import numpy as np
-    
-    # Calculate m 
-    m = (np.mean([stats.mstats.mquantiles(mags,prob=0.9),stats.mstats.mquantiles(mags,prob=0.1)])-np.median(mags))/np.sqrt(((mags-mags.mean())**2).sum()/len(mags))
+
+    # Calculate m
+    (tenth, ninetieth) = np.percentile(mags, [10, 90])
+    mean = np.mean(mags[np.logical_or(mags>ninetieth, mags<tenth)])
+
+    m = (mean-np.median(mags))/np.std(mags)
     
     return m
