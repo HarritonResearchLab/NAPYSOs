@@ -7,5 +7,3 @@ Misc. Notes:
 # About this repository
 
 ![Visualization of this repo](./diagram.svg)
-
-<img src="./diagram.svg" alt="repo diagram" width="200"/> 
