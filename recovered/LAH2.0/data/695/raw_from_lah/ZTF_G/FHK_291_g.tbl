@@ -1,0 +1,63 @@
+\fixlen = T
+\RowsRetrieved = 9
+\ oid
+\ ___ Object ID
+\ expid
+\ ___ Exposure ID
+\ hjd (d)
+\ ___ Heliocentric Julian Date of the midpoint of the exposure (using the mean ra and dec of the input catalog)
+\ mjd (d)
+\ ___ Modified Julian Date of the start of the exposure
+\ mag (mag)
+\ ___ Magnitude
+\ magerr (mag)
+\ ___ Uncertainty in mag measurement. Includes correction to conform to photometric repeatability RMS derived from "non-variable" population.
+\ catflags
+\ ___ Catalog flags for source from PSF-fitting catalog
+\ filtercode
+\ ___ Filter code (abbreviated name)
+\ ra (deg)
+\ ___ Right Ascension of source
+\ dec (deg)
+\ ___ Declination of source
+\ chi
+\ ___ Chi-squared of source
+\ sharp
+\ ___ Sharpness of source
+\ filefracday
+\ ___ Exposure file timestamp, with decimal representation YYYYMMDDdddddd: year, month, day, and fractional day
+\ field
+\ ___ Field ID
+\ ccdid
+\ ___ CCD number (1..16)
+\ qid
+\ ___ Quadrant ID (1..4)
+\ limitmag (mag)
+\ ___ Approximate 5-sigma limiting magnitude corresponding to epoch-based PSF-fit catalog
+\ magzp (mag)
+\ ___ Magnitude zeropoint from photometric calibration
+\ magzprms (mag)
+\ ___ RMS deviation in magnitude zeropoint
+\ clrcoeff
+\ ___ Color coefficient from linear fit
+\ clrcounc
+\ ___ Color coefficient uncertainty from linear fit
+\ exptime (s)
+\ ___ Exposure time from scheduler
+\ airmass
+\ ___ Airmass at approximately the center of the focal plane at time of exposure
+\ programid
+\ ___ Program ID
+|                     oid|                   expid|                     hjd|                     mjd|                     mag|                  magerr|                catflags|  filtercode|                      ra|                     dec|                     chi|                   sharp|             filefracday|                   field|                   ccdid|                     qid|                limitmag|                   magzp|                magzprms|                clrcoeff|                clrcounc|                 exptime|                 airmass|               programid|
+|                    long|                     int|                  double|                  double|                   float|                   float|                     int|        char|                  double|                  double|                   float|                   float|                    long|                     int|                     int|                     int|                   float|                   float|                   float|                   float|                   float|                   float|                   float|                     int|
+|                        |                        |                       d|                       d|                     mag|                     mag|                        |            |                     deg|                     deg|                        |                        |                        |                        |                        |                        |                     mag|                     mag|                     mag|                        |                        |                       s|                        |                        |
+|                    null|                    null|                    null|                    null|                    null|                    null|                    null|        null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|
+          768102300042914                 52840346        2458282.904387956       58282.403460599999               21.1830559              0.193393111                     4096           zg       313.37759999999997       44.428547600000002                    1.171             -0.236000001           20180613403449                      768                        2                        3               21.4099998               26.1379547             0.0442265421            -0.0434676521           5.79631705e-05                       30               1.07799995                        1 
+          768102300042914                 56645274       2458320.9553066581       58320.452743100002               20.5735168              0.152409196                     4096           zg       313.37845040000002       44.428730899999998              0.730000019              0.137999997           20180721452720                      768                        2                        3               21.3099995               25.8273506             0.0556567386            -0.0560579449           0.000114344955                       30               1.13600004                        1 
+          768102300042914                 60824487       2458362.7481290852       58362.244872700001               21.6147118               0.22241652                     4096           zg       313.37771500000002       44.428729099999998              0.513000011             -0.199000001           20180901244873                      768                        2                        3               21.4200001               26.3203602             0.0499391742             -0.051193554           7.96096065e-05                       30               1.03199995                        1 
+          768102300042914                 61623813       2458370.7413556119       58370.238136599997               20.9858856              0.180135846                     4096           zg       313.37841539999999       44.428313799999998               0.43599999              0.129999995           20180909238125                      768                        2                        3               21.6200008               26.2993546             0.0469580814            -0.0513007268           6.51838418e-05                       30               1.03400004                        1 
+          768102300042914                 62430971       2458378.8128344817       58378.309710599999               21.8502426              0.238253117                     4096           zg       313.37840130000001       44.428392199999998              0.477999985             -0.275000006           20180917309688                      768                        2                        3                     21.5               26.3241673             0.0470998921            -0.0787406862           7.08904336e-05                       30               1.18099999                        1 
+          768102300042914                 96430967       2458718.8129056445       58718.309675899996               21.4189796              0.209256053                     4096           zg              313.3779907       44.428729699999998              0.684000015             -0.153999999           20190823309653                      768                        2                        3               21.5799999               26.2048931             0.0448284298            -0.0532968342            6.4054504e-05                       30               1.04999995                        1 
+          768102300042914                 96828824       2458722.7914912575            58722.2882407               21.1991024              0.194472075                     4096           zg       313.37776480000002               44.4286636               1.05900002             -0.164000005           20190827288218                      768                        2                        3               21.6399994               26.2180367             0.0521101356            -0.0800185204           8.64128669e-05                       30               1.04200006                        1 
+          768102300042914                 97228837       2458726.7916369848       58726.288379600002               21.7905045              0.234236479                     4096           zg       313.37823800000001       44.428403400000001              0.514999986             -0.486999989           20190831288356                      768                        2                        3               21.5200005               26.2094097             0.0486642718            -0.0563984439           7.62008422e-05                       30               1.04999995                        1 
+          768102300042914                 99618920       2458750.6922057164       58750.189201399997               21.2136402              0.195449471                     4096           zg       313.37793240000002       44.428690899999999              0.720000029             0.0850000009           20190924189178                      768                        2                        3               21.1299992               26.1673183             0.0542792119            -0.0695164651           0.000108423657                       30               1.03299999                        1 

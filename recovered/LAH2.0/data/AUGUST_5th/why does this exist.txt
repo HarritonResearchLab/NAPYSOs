@@ -1,0 +1,20 @@
+Rational for the existance of August 5th data directory: 
+
+The only other place where FHK_176 was found was in the original 695 data distribution, despite the fact that it should be in the new ones. Thus I had to recovery it and make a new data directory with it's data in it. 
+
+## Information to use later for FHK_176
+ID,RA,DEC 
+FHK_176,313.0564583333333,44.20058333333334
+
+
+NUM OBS:  526
+MEAN R:  16.12621518878327
+SOKOLOVSKY NU:  0.00597472965672149
+Q: 0.4
+M: 
+
+('FHK_176', 1.3765828211679403, 0.08656722601866307, 15.371097987063141, 0.17395794108903484, 54.00397646402739, 1.7116792849234674, 0.328463464477391)
+plot_title.group(), m_median, m_error, b_median, b_error, np.rad2deg(a_median), np.rad2deg(a_error), pythag
+
+
+data files are in different folder for FHK_167 because it's cmd data was different!

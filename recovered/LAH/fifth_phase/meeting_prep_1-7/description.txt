@@ -1,0 +1,8 @@
+Data were interpolated...
+
+xerr measurements where calculated with the formula (g_magerr**2+r_magerr**2)**0.5, where r_magerr was the
+measurement uncertainty for the r_mag used to calculate the cmd point, and the g_magerr was estimated from 
+the g_magerr whose mag observation date was closest to the observation date of the red mag/r_magerr used to 
+calculate the cmd point. 
+
+yerr measurements were taken with the same method as the g_magerrs in the xerr array. 

@@ -1,0 +1,6 @@
+Notes on this "good_ids" routine: 
+
+Max mean g mag for an object to be included in the sample: 20.8
+Variability cutoff: 15th percentile over one mag width bins, linearly interpolated
+Sig multiplicitive factor: 1.25
+

@@ -1,0 +1,7 @@
+ID,Q,M,SLOPE
+2MASS_J20582381+4353114...maybe? slope is consist. within errors, no qm results tho
+GDR1_2162988754817727232....NO!....
+GDR1_2163145984982389632,0.68,0.41,5.703598235107119
+FHK_577...No! errors too high? I'm confused with miles..
+
+GDR1_2162886568955114112

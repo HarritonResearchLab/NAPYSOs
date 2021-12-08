@@ -1,0 +1,5 @@
+CMD Objects to investigate: 
+
+FHK_24: shouldn't return any significant slope angle
+2MASS_J20511262+4418454: when no cmd data is ignored, what does its CMD diagram look like? 
+GDR1_2163148768121199360: I'm interested in what this one looks like

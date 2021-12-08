@@ -1,0 +1,15 @@
+FHK_286
+Strongest period: 0.9746987212152339 days
+OK? Most aliased day periods were 0.99-1.01 or even 0.995-1.005
+Second period: 43.080207663899714 days
+When the light curve is force folded to either period, the scatter is similiarly good. 
+
+FHK_176
+Strongest period: 0.9723642473694504 days
+Second perid: 38.947393984279515 days
+Phases slightly better to shorter period. 
+
+Misc. Notes
+The three grey lines on the periodogram plots correspond to the 0.1, 0.05. 0.01 FAP levels. 
+
+

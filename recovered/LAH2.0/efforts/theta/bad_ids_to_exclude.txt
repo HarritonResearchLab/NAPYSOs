@@ -1,0 +1,5 @@
+IDS that are bad no matter what, because they screw with our q code (either they make it 
+crash, or just give *really* weird answers, like Q=2, etc.): 
+2MASS_J20523394+4429168
+GDR1_2162123198648385024
+FHK_464

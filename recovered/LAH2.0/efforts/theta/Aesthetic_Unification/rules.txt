@@ -1,0 +1,23 @@
+# Plot unification things
+# {} shows where you can use either axs[i] or plt.gca() if you are using subplots or a single plot
+
+############
+
+# Change font family to serif
+
+plt.rcParams['font.family'] = 'serif' 
+
+# Tons of ticks settings
+from matplotlib.ticker import AutoMinorLocator
+{axs[i]~or~plt.gca()}.tick_params(axis='both',which='both',direction='in')
+{axs[i]~or~plt.gca()}.tick_params(bottom=True,top=True,left=True,right=True)
+{axs[i]~or~plt.gca()}.tick_params(labelbottom=True,labeltop=False,labelleft=True,labelright=False)
+{axs[i]~or~plt.gca()}.xaxis.set_minor_locator(AutoMinorLocator())
+{axs[i]~or~plt.gca()}.yaxis.set_minor_locator(AutoMinorLocator())
+
+# Adjust hspace and wspace between subplots if there are subplots (x and y are floats between 0 and 1)
+plt.subplots_adjust(wspace=x, hspace=y)
+
+# Adjust legend params (fontsize and location can be tweaked)
+{axs[i]~or~plt.gca()}.legend(loc='upper right',fontsize=5,fancybox=False,edgecolor='black',shadow=False)
+

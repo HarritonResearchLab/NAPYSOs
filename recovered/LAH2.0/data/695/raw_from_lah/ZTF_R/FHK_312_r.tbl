@@ -1,0 +1,58 @@
+\fixlen = T
+\RowsRetrieved = 4
+\ oid
+\ ___ Object ID
+\ expid
+\ ___ Exposure ID
+\ hjd (d)
+\ ___ Heliocentric Julian Date of the midpoint of the exposure (using the mean ra and dec of the input catalog)
+\ mjd (d)
+\ ___ Modified Julian Date of the start of the exposure
+\ mag (mag)
+\ ___ Magnitude
+\ magerr (mag)
+\ ___ Uncertainty in mag measurement. Includes correction to conform to photometric repeatability RMS derived from "non-variable" population.
+\ catflags
+\ ___ Catalog flags for source from PSF-fitting catalog
+\ filtercode
+\ ___ Filter code (abbreviated name)
+\ ra (deg)
+\ ___ Right Ascension of source
+\ dec (deg)
+\ ___ Declination of source
+\ chi
+\ ___ Chi-squared of source
+\ sharp
+\ ___ Sharpness of source
+\ filefracday
+\ ___ Exposure file timestamp, with decimal representation YYYYMMDDdddddd: year, month, day, and fractional day
+\ field
+\ ___ Field ID
+\ ccdid
+\ ___ CCD number (1..16)
+\ qid
+\ ___ Quadrant ID (1..4)
+\ limitmag (mag)
+\ ___ Approximate 5-sigma limiting magnitude corresponding to epoch-based PSF-fit catalog
+\ magzp (mag)
+\ ___ Magnitude zeropoint from photometric calibration
+\ magzprms (mag)
+\ ___ RMS deviation in magnitude zeropoint
+\ clrcoeff
+\ ___ Color coefficient from linear fit
+\ clrcounc
+\ ___ Color coefficient uncertainty from linear fit
+\ exptime (s)
+\ ___ Exposure time from scheduler
+\ airmass
+\ ___ Airmass at approximately the center of the focal plane at time of exposure
+\ programid
+\ ___ Program ID
+|                     oid|                   expid|                     hjd|                     mjd|                     mag|                  magerr|                catflags|  filtercode|                      ra|                     dec|                     chi|                   sharp|             filefracday|                   field|                   ccdid|                     qid|                limitmag|                   magzp|                magzprms|                clrcoeff|                clrcounc|                 exptime|                 airmass|               programid|
+|                    long|                     int|                  double|                  double|                   float|                   float|                     int|        char|                  double|                  double|                   float|                   float|                    long|                     int|                     int|                     int|                   float|                   float|                   float|                   float|                   float|                   float|                   float|                     int|
+|                        |                        |                       d|                       d|                     mag|                     mag|                        |            |                     deg|                     deg|                        |                        |                        |                        |                        |                        |                     mag|                     mag|                     mag|                        |                        |                       s|                        |                        |
+|                    null|                    null|                    null|                    null|                    null|                    null|                    null|        null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|                    null|
+         1768210300050100                 58040686       2458334.9098139908            58334.4068634               21.4593143              0.219116211                     4096           zr       313.41143529999999               44.4417768              0.632000029             -0.393999994           20180804406840                     1768                       10                        3               21.1499996               26.2816963             0.0326535776              0.136690915           1.09601451e-05                       30               1.10599995                        2 
+         1768210300050100                 58136421       2458335.8671849249       58335.364213000001               21.3393211              0.210379004                     4096           zr       313.41108800000001       44.441605299999999              0.681999981             -0.419999987           20180805364201                     1768                       10                        3               21.1000004               26.2428837             0.0348980315              0.156509355           1.22505653e-05                       30               1.03900003                        2 
+         1768210300050100                 58236280       2458336.8657942773       58336.362800900002               21.3960838               0.21451211                     4096           zr       313.41155880000002       44.441581300000003              0.393999994             -0.229000002           20180806362801                     1768                       10                        3               21.2800007               26.3046646             0.0335224308              0.155035838           1.12847911e-05                       30               1.03999996                        2 
+         1768210300050100                 90136504       2458655.8663510908       58655.365046300001               20.7019157              0.163966894                     4096           zr       313.41097009999999       44.441867600000002              0.726999998             -0.446999997           20190621365046                     1768                       10                        3               20.3700008               26.2306156             0.0326326974              0.119340524           1.43447623e-05                       30               1.10099995                        3 
