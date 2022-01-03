@@ -7,7 +7,7 @@
 
 
 
-def slopes_demo_plot(ids, lc_dir, cmd_dir, slopes, intercepts, plot_dir):
+def slopes_demo_plot(ids, lc_dir, cmd_dir, odr_file, plot_class):
     # Import(s)
     import os 
     import numpy as np
@@ -18,6 +18,13 @@ def slopes_demo_plot(ids, lc_dir, cmd_dir, slopes, intercepts, plot_dir):
     
     # Action
     
+    odr_df = pd.read_csv(odr_file)
+    all_ids = list(odr_df['star Identifier'])
+    all_slopes = np.array(odr_df['odr slope'])
+    all_intercepts = np.array(odr_df['intercept'])
+
+    id_indices = [all_ids.index(ids[0]), all_ids.index(ids[1])]
+
     # Create plot
     plt.rcParams['font.family'] = 'serif'
     plt.rcParams['figure.figsize'] = (10, 4)
@@ -59,8 +66,10 @@ def slopes_demo_plot(ids, lc_dir, cmd_dir, slopes, intercepts, plot_dir):
         med_errs_y = axs[1, i].get_ylim()[1]
         
         ## Best fit line
-        slope = slopes[i]
-        intercept = intercepts[i]
+        id_index = id_indices[i]
+
+        slope = all_slopes[id_index]
+        intercept = all_intercepts[id_index]
         
         x_bounds = np.array([(min(gs)-intercept), (max(gs)-intercept)])/slope
         
@@ -102,23 +111,20 @@ def slopes_demo_plot(ids, lc_dir, cmd_dir, slopes, intercepts, plot_dir):
             axs[j, i].yaxis.set_minor_locator(AutoMinorLocator())
         
     plt.subplots_adjust(wspace=0.25, hspace=0.45)
-    #plt.savefig(os.path.join(plot_dir, 'qpd_slopes_gallery_2.png'), bbox_inches='tight', dpi=600)
-    plt.show()
+    file_name = 'slopes_gallery_'+plot_class+'_.png'
+    plt.savefig(file_name, bbox_inches='tight', dpi=250)
+    #plt.show()
 
 
-### change all below after miles re-runs odr
+odr_file = 'https://raw.githubusercontent.com/HarritonResearchLab/NAPYSOs/main/referee_changes/odr-redux/odr_results.csv'
+lc_dir = r'C:\Users\Research\Documents\GitHub\NAPYSOs\recovered\2.0\data\AUGUST_5th\light_curves'
+cmd_dir = r"C:\Users\Research\Documents\GitHub\NAPYSOs\referee_changes\color-mag\reprocessing\cmd_files"
 
 ### Bursters 
-ids_b = ['FHK_32','FHK_142']
-slopes_b = [1.9361835024995053, 0.985578160011938]
-intercepts_b = [14.939790288192524, 14.667908951835173]
-lc_dir = r'C:\Users\Research\Documents\GitHub\NAPYSOs\recovered\2.0\data\AUGUST_5th\light_curves'
-cmd_dir = r'C:\Users\Research\Documents\GitHub\NAPYSOs\referee_changes\color-mag\reprocessing\cmd_files\cmd_files'
-plot_dir = r''
-slopes_demo_plot(ids=ids_b, lc_dir=lc_dir, cmd_dir=cmd_dir, slopes=slopes_b, intercepts=intercepts_b, plot_dir=plot_dir)
+ids_b = ['FHK_32', '2MASS_J20512059+4420322'] # ['','FHK_142'] 
+slopes_demo_plot(ids=ids_b, lc_dir=lc_dir, cmd_dir=cmd_dir, odr_file = odr_file, plot_class='b')
+
 ### dippers
 ids_qpd = ['2MASS_J20582381+4353114','FHK_163']
-slopes_qpd = [3.6602377592858373, 3.6589457101373295]
-intercepts_qpd = [9.909792577788114, 8.465106990805705]
-slopes_demo_plot(ids=ids_qpd, lc_dir=lc_dir, cmd_dir=cmd_dir, slopes=slopes_qpd, intercepts=intercepts_qpd, plot_dir=plot_dir)
+slopes_demo_plot(ids=ids_qpd, lc_dir=lc_dir, cmd_dir=cmd_dir, odr_file = odr_file, plot_class='d')
 
