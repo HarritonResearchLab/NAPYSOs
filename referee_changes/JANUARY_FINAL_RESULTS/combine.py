@@ -88,6 +88,8 @@ odr_df = pd.read_csv('https://raw.githubusercontent.com/HarritonResearchLab/NAPY
 
 final_merged = merged_df.merge(odr_df, left_on='ID', right_on='star Identifier')
 
+final_merged = final_merged.drop(columns=['per_changed', 'star Identifier'])
+
 print(final_merged)
 
 
@@ -96,4 +98,4 @@ import matplotlib.pyplot as plt
 plt.hist(final_merged['Q'])
 plt.show()
 
-final_merged.to_csv("JANUARY_FINAL_RESULTS.CSV", index=False)
+final_merged.to_csv("./referee_changes/JANUARY_FINAL_RESULTS/JANUARY_FINAL_RESULTS.csv", index=False)
