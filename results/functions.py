@@ -17,9 +17,9 @@ def Q(dates, mags, magerrs, timescale, sig_factor):
     from astropy.convolution import Box1DKernel, convolve
     
     # Convert to arrays
-    mjd = np.array(mjd)
-    mag = np.array(mag)
-    magerr = np.array(magerr)
+    mjd = np.array(dates)
+    mag = np.array(mags)
+    magerr = np.array(magerrs)
         
     # Calculate sig
     sig = sig_factor*np.mean(magerr)
