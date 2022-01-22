@@ -10,6 +10,7 @@
 - [ ] update figure 12??     
 - [x] check that figures with references qs haven't had them changed    
     * if they have fix them :)    
+- [x] update infrared plots with new qm data 
 - [ ] figure 13   
     * remake all the appendix plots with new data      
     * replace the old plots in fig 13 with new ones    
