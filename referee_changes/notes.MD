@@ -7,7 +7,7 @@
 - [x] update the period / timescales plots in figure 4 with updated periods / classes now    
 - [x] update table 4 with new dist %s calculated on january final results    
 - [x] update figure 6 with new data     
-- [x] update figure 12??     
+- [ ] update figure 12??     
 - [x] check that figures with references qs haven't had them changed    
     * if they have fix them :)    
 - [ ] figure 13   
@@ -17,7 +17,9 @@
  
 - [ ] Email LAH   
     * should we still have table 3?  
-    * should we add information about changing periods based on how they accounted for aliases // beat periods into the  paper?   
+    * should we add information about changing periods based on how they accounted for aliases // beat periods into the  paper?
+    * ask about what we needed to change for appendix kepler plots
+
 
 ## OTHER
 
