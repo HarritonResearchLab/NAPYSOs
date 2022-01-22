@@ -208,8 +208,8 @@ def make_scaled_qm_plot(results_file, q_bounds, plot_path):
     for i in range(8): 
         lgnd.legendHandles[i]._sizes = [18]
     
-    plt.show()
-    #plt.savefig('updated_qm_plot.png', dpi=300, bbox_inches='tight')
+    #plt.show()
+    plt.savefig('referee_changes/qm_plot/updated_qm_plot.png', dpi=300, bbox_inches='tight')
     
 
 def change_scaling(results_file): 
@@ -248,6 +248,7 @@ def change_scaling(results_file):
     axs[3].set(xlabel='new scaled nu', ylabel='Frequency')
 
     plt.show()
+    #plt.savefig('referee_changes/qm_plot/updated_qm_plot.png', dpi=250)
 
 
     '''
@@ -282,7 +283,7 @@ def change_scaling(results_file):
     '''
 
 
-results_file = r'C:\Users\Research\Documents\GitHub\NAPYSOs\recovered\2.0\efforts\september21\SEPTEMBER_FINAL_RESULTS\merged_results.csv'
+results_file = './referee_changes/JANUARY_FINAL_RESULTS/JANUARY_FINAL_RESULTS.csv'
 
 #change_scaling(results_file)
 #make_qm_plot(results_file, [0.45,0.87], '')
