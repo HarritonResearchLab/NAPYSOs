@@ -1,6 +1,6 @@
 % TO DO:
 %
-%. Figure 13:  the plots will need to get switched out with the files in the new tar.xz file given the new M values. 
+%. Figure 13:  the plots will need to get switched out with the files in the new tar.xz file given the new M values...and now the potentially updated Q's based on period changes
 %  
 % There is a major re-labelling exercise we are going to have to do....LAH has a .csv file.
 
@@ -28,7 +28,8 @@
 \linenumbers %need to un-comment this line before submission
 
 \submitjournal{The Astronomical Journal}
-\received{27 October 2021, UT}
+\received{27 October 2021}
+\revised{31 January 2022}
 
 \newcommand{\lah}[1]{\textcolor{brown}{#1}}
 \newcommand{\lahcomm}[1]{\textcolor{brown}{COMMENT: #1}}
@@ -87,8 +88,8 @@ While photometric variability has long been known as a ubiquitous characteristic
 \begin{figure*}[ht]
 \includegraphics[width=0.95\textwidth]{skyview.png}.
 \centering
-\caption{Full sample of 694 selected NAP nebulae complex members plotted over a DSS2-R red photographic image of the region. %% CHeck if this is the right one? might be 535, not sure
-Our final sample of 323 variable sources is in darker blue, with additional members sources not meeting all of the applied ZTF photometric cuts in lighter blue.}
+\caption{Full sample of selected likely members of the NAP nebulae complex plotted over a DSS2-R red photographic image of the region. %% CHeck if this is the right one? might be 535, not sure
+Our final sample of 323 variable sources from ZTF is in darker blue, with the remaining likely member sources that do not meet all of the applied ZTF photometric cuts represented in lighter blue.}
 \label{fig:skyview}
 \end{figure*}
 
@@ -114,7 +115,7 @@ In \cite{Kuhn2020}, membership was assessed using Gaia kinematics for all candid
 In \cite{Fang2020}, membership for stars with optical spectroscopic data was assessed from a combination of indicators. These included stellar activity manifest through X-rays and accretion-related optical emission lines, infrared excess indicative of circumstellar dust, lithium absorption, and parallax and proper motion criteria.
 }
 
-Figure~\ref{fig:skyview} shows the initial sample of, as well as the reduced, final sample discussed below.
+Figure~\ref{fig:skyview} shows the {\bf spatial distribution of the} initial sample as well as the reduced, final sample discussed below.
 
 
 %%%%%%%%%%OBSERVATIONS%%%%%
@@ -125,10 +126,11 @@ In this paper, we analyze data from the fourth public ZTF data release (ZTF DR4)
 $g$ having $\lambda_{\rm eff}=4811$ \AA\ and $r$ having $\lambda_{\rm eff}=6156$\AA) and reported in AB magnitudes. 
 
 {\bf  Two objects were removed from the sample 
-(2MASS J20505838+4414444 near FHK 47 and GDR1 2163143481019730688 near FHK 67) 
+(2MASS J20505838+4414444 near FHK 47 = V1597 Cyg A,
+and Gaia DR2 2163143481019730688 near FHK 67) 
 because they are the fainter members of close pairs, and the photometry is spatially unresolved in ZTF.
-We additionally note that while GDR1 2162231676644797824 and FHK 485 are spatially resolved,
-their photometry and lightcurves are likely cross-contaminated.
+We additionally note that while 2MASS J20593270+4408353 %Gaia DR2 2162231676644797824 
+and FHK 485 are spatially resolved in ZTF images, their photometry and hence lightcurves appear cross-contaminated.
 }
 
 The median cadence of the ZTF light curves in the NAP region is $\sim1$ day. 
@@ -169,16 +171,16 @@ For our analysis,  we restrict the sample to objects with mean $g < 20.8$ mag or
          &    &     & or Period&   &   &       &     & Var. Class & Var. Class & Angle \\
      & (deg) & (deg) & (d) & & & & (mag) &  & & (deg) \\
     \tableline
-    FHK 101 &  312.86058 &    44.608 &  8.997 &  0.89 &  -0.05 &  0.0644 &  18.21 &    S &    - &     - \\
-    FHK 115 &  312.88908 &  44.44358 &  6.292 &  0.71 &    0.1 &  0.0133 &   15.0 &  QPS &    - &  71.2 \\
-    FHK 118 &  312.89746 &  44.51089 &  4.416 &  0.11 &   0.17 &  0.0103 &  18.11 &    P &    - &  50.0 \\
-    FHK 123 &  312.91108 &  44.06139 &  0.948 &  0.92 &  -0.09 &  0.0319 &  16.96 &    S &    - &  63.3 \\
-    FHK 127 &  312.92192 &  43.79861 &  1.356 &  0.44 &   0.08 &    0.01 &  15.69 &  QPS &   MP &  57.6 \\
-    FHK 130 &  312.92542 &  44.64908 &  8.214 &  0.58 &  -0.08 &  0.0071 &  15.44 &  QPS &    L &  47.6 \\
-    FHK 133 &  312.93708 &  44.43861 &  3.772 &  0.15 &   0.03 &  0.0104 &  16.88 &    P &    L &  63.3 \\
-    FHK 134 &  312.93817 &  43.81731 &  6.242 &  0.61 &   0.26 &  0.0195 &  18.47 &  QPD &    - &  49.8 \\
-    FHK 137 &  312.94396 &  44.37258 &  2.175 &  0.25 &   0.11 &  0.0145 &  16.42 &    P &    - &  56.6 \\
-    FHK 138 &  312.94758 &  44.53561 &  6.421 &   0.7 &    0.4 &  0.0266 &  18.39 &  QPD &    - &  56.7 \\
+    V752 Cyg &  314.63997 &  44.05985 &  6.652 &  0.93 &  -0.05 &  0.0824 &  16.06 &    S &    - &  67.6 \\
+    V1716 Cyg &  314.52548 &  43.88363 &   4.14 &  0.77 &  -0.49 &  0.0179 &  16.54 &    B &    P &  63.2 \\
+    V1701 Cyg &  312.75373 &  44.53047 &  6.937 &  0.92 &   0.81 &   0.084 &  15.96 &  APD &    - &  80.5 \\
+    V1492 Cyg &  312.77375 &  44.27562 &  10.48 &  0.88 &   0.39 &  0.0549 &  14.88 &  QPD &    - &  74.9 \\
+    V1490 Cyg &  312.72325 &  44.35025 &  31.17 &  0.67 &   0.71 &  0.0571 &  14.96 &  QPD &    - &  81.9 \\
+    PSO J205818.503+435346.014 &   314.5771 &  43.89609 &      - &  0.73 &   0.32 &  0.0414 &  18.07 &  QPD &    - &  64.7 \\
+    PSO J205647.351+434127.587 &  314.19732 &  43.69101 &      - &  0.89 &  -0.26 &  0.0075 &  13.25 &    B &    - &  42.0 \\
+    LkHA 191 &  314.77429 &  43.95086 &      - &   0.9 &  -0.89 &  0.0113 &  12.44 &    B &    - &   7.5 \\
+    LkHA 189 &  314.60004 &   43.8985 &  2.449 &  0.73 &   0.34 &  0.0118 &  15.57 &  QPS &    L &  65.3 \\
+    LkHA 188 &  314.59921 &  43.88648 &  1.011 &  0.78 &   0.84 &  0.0406 &  13.16 &  QPD &    - &  74.3 \\
     \tableline
     \end{tabular}
      %can use \tablenotemark{a} in table and then here \tablenotetext{a}{for notes associated with marker a}
@@ -204,7 +206,8 @@ For our analysis,  we restrict the sample to objects with mean $g < 20.8$ mag or
 \centering 
 \caption{Mean $1\sigma$ photometric uncertainty as a function of mean $r$ magnitude, calculated from the ZTF DR4 data products. 
 Objects in our final variable star sample are shown in darker blue, and those not meeting all photometric cuts in lighter blue.
-The outlier at $r\approx18$ and $\sigma_r\approx0.06$ is $\mathrm{GDR1}\mathrm{\;} 2162947420052773760$, a source that undergoes an abrupt dimming event of $>4.5$ mag approximately halfway through the observing window.} %4.57 mag dimming event; ID is GDR1_2162947420052773760
+The outlier at $r\approx18$ and $\sigma_r\approx0.06$ is FHK 96,  %$\mathrm{GDR1}\mathrm{\;} 2162947420052773760$, 
+a source that undergoes an abrupt dimming event of $>4.5$ mag approximately halfway through the observing window.} 
 \label{fig:magmagerr}
 \includegraphics[width=0.5\textwidth]{mag_vs_nu.png}
 \centering
@@ -219,6 +222,9 @@ The $r$-band light curves, $g$ vs $g-r$ color-magnitude trends, and periodogram 
 representative sources in Appendix A; the full sample is available in an online figure set.
 
 The results of our ZTF light curve analysis as described below appear in Table \ref{tab:properties}.
+{\bf Source identifiers were adopted in the order: LkH$\alpha$ numbers from \cite{Herbig1958}, V* identifiers
+from the General Catalog of Variable Stars, FHK identifiers from \cite{Fang2020}, then catalog identifiers from 
+2MASS \cite{Cutri2003} and finally Gaia DR2 \cite{GC2018} }
 Photometric variability amplitude, and timescale or period (as appropriate) are discussed in this section.
 Light curve asymmetry and waveform repeatability are presented in the next section.
 
@@ -244,51 +250,59 @@ Figure \ref{fig:magvsnu} depicts the selection of sources based on $\nu$, and Ta
 We use the Astropy implementation of the Lomb-Scargle periodogram \citep{VanderPlas2012, VanderPlas2015} to search for periodic signals in the $\sim$825 day ZTF data stream. Possible periods between 0.5 and 250 days are considered. 
 
 We compute the periodogram for every object in the variable sample, flagging periods between 0.5--0.51, 0.98--1.02, 1.96--2.04, and 26--30 days for further analysis to avoid the most common aliases associated with the solar and sidereal days, as well as the lunar cycle  \citep[following][]{Rodriguez2017,Ansdell2018}.  In particular, the window function shows that we have the potential for extremely strong signals at frequencies corresponding to 1.000 and 0.997 day periods. To account for additional potentially aliased periods, we flag periods with half or double multiples that fail at least one of the aforementioned alias checks.   We then compute the $90\%$, $95\%$, and $99\%$ confidence false alarm probability levels, and consider the period corresponding to the highest power peak greater than the $99\%$ confidence false alarm probability (FAP $<  0.01$) to be significant \citep[following][]{Messina2010}. 
-{\bf While FAP values may not be as reliable as formal hypothesis tests, they are sufficient for our purpose here which is to identify variability timescales for visual examination and further assessment.}
-We repeat the above procedure with $g$ band data for objects lacking a significant period in $r$, and if a significant period is found in $g$, we return this period for the source. 
+{\bf While FAP values may not be as reliable as formal hypothesis tests, they are sufficient for our purpose here, which is to identify potential variability timescales for visual examination and further assessment.}
 
-For each object, the full light curve was phased at the four most significant peaks, and visually examined to assess the dispersion across phase.  We also marked periods corresponding to beats of the $\sim1$ day sampling interval to assess the expected fourier patterns.   The periodograms are quite clean in terms of signal-to-noise. In the vast majority of cases, the highest periodogram peak was retained as correct.  In some cases, however, a longer period with a slightly less prominent peak was retained as the most likely true period based on the beat patterns and phase dispersion minimization. 
+We repeat the above procedure with $g$ band data for objects lacking a significant period in $r$. If a significant period is found in $g$, we return this period for the source. 
 
-Objects with significant Lomb-Scargle periodogram peaks {\bf in either $r$ or $g$} that passed our vetting procedures are reported in Table~\ref{tab:properties}. We have labelled the column as containing both timescales and true periods. In cases where the value of $Q$ (quasi-periodicity metric; see next section) is high, the periodogram peaks are more appropriately thought of as timescales, whereas when $Q$ is low, the light curve is truly periodic in the sense of strictly repeating, with low residual dispersion in the phased light curve.  In this latter case, there is also a ``P" in the column labelled as the primary variability classification.  A few sources have multiple significant peaks in the periodogram, and are given ``MP" classifications;
-see Table~\ref{tab:mp_objs} for additional information.
+For each object, the full light curve was phased at the four most significant peaks, and visually examined to assess the dispersion across phase.  We also marked periods corresponding to beats of the $\sim1$ day sampling interval to assess the expected fourier patterns.   The periodograms are quite clean in terms of signal-to-noise. In the vast majority of cases, the highest periodogram peak was retained as correct, {\bf with recognizable harmonic aliasing and beats having lower power.  
+A particularly interesting and non-intuitive example in this regard, is given in Appendix B.}
+In some cases, however, a longer period with a slightly less prominent peak was retained as the most likely true period based on better explanation of the beat patterns, and improved phase dispersion minimization.  
+%Where multiple similarly valid periods exist, we select the periods that explain harmonic and or beat period behavior. 
+
+Objects with significant Lomb-Scargle periodogram peaks {\bf in either $r$ or $g$} that passed our vetting procedures are reported in Table~\ref{tab:properties}. We have labelled the column as containing both timescales and true periods. In cases where the value of $Q$ (quasi-periodicity metric; see next section) is high, the periodogram peaks are more appropriately thought of as timescales, whereas when $Q$ is low, the light curve is truly periodic in the sense of strictly repeating, with low residual dispersion in the phased light curve.  In this latter case, there is also a ``P" in the column labelled as the primary variability classification.  A few sources have multiple significant peaks in the periodogram, and are given ``MP" classifications.
+%see Table~\ref{tab:mp_objs} for additional information.
 %with further discussion of two oddly long-period, multi-periodic objects appearing in Section~\ref{slowRotators}. 
 
-\begin{table*}
-    \centering
-    \caption{Stars with complex periodogram peaks {\bf -- NEED TO REVSIT AFTER LATEST PERIOD VETTING}   
-    FHK 176 and FHK 286 are two cases with unusually long periods, and are discussed in Appendix C.
-    FHK 127 and FHK 576 have myriad significant periodogram peaks, with several that are real and others that are harmonically related. 
-    FHK 408 and FHK 511 each seem to have several genuine independent peaks.
-    }
-    \begin{tabular}{cccl}
-        \tableline
-        \tableline
-        Name & Primary Period (d) & Other Periods (d) & Interpretation\\
-        \tableline
-        FHK 176 & 0.972 & 35.314 & beat\\  
-                & 38.990& 1.026 & alias of 0.972 plus beat\\  
-        FHK 286 & 0.975 & 43.01 & beat\\  
-                & 38.656& 1.024 & alias of 0.975 plus beat\\   
-        FHK 127 & 1.357 & 0.575, 1.714, 0.63, 2.400  & beat, real, beat, beat\\
-        %FHK 371 & 12.65 & 0.92, 1.08 & beats\\
-        FHK 408 & 1.41 & 0.77, 3.44 & all real\\
-        FHK 511 & 4.961 & 11.863, 11.498, 11.181&  all real? \\
-        FHK 576 & 1.65 & 0.82, 0.62, 4.74, 9.621 & harmonic, beat, real, real\\ %also 4.747 and 9.621 ??
-        \tableline
-    \end{tabular}
-    \label{tab:mp_objs}
-\end{table*}
+%\begin{table*}
+%    \centering
+%    \caption{Stars with complex periodogram peaks {\bf -- NEED TO REVSIT AFTER LATEST PERIOD VETTING}   
+%    FHK 176 and FHK 286 are two cases with unusually long periods, and are discussed in Appendix B.
+%    FHK 127 and FHK 576 have myriad significant periodogram peaks, with several that are real and others that are harmonically related. 
+%    FHK 408 and FHK 511 each seem to have several genuine independent peaks.
+%    }
+%    \begin{tabular}{cccl}
+%        \tableline
+%        \tableline
+%        Name & Primary Period (d) & Other Periods (d) & Interpretation\\
+%        \tableline
+%        FHK 176 & 0.972 & 35.314 & beat\\  
+%                & 38.990& 1.026 & alias of 0.972 plus beat\\  
+%        FHK 286 & 0.975 & 43.01 & beat\\  
+%                & 38.656& 1.024 & alias of 0.975 plus beat\\   
+%        FHK 127 & 1.357 & 0.575, 1.714, 0.63, 2.400  & beat, real, beat, beat\\
+%        %FHK 371 & 12.65 & 0.92, 1.08 & beats\\
+%        FHK 408 & 1.41 & 0.77, 3.44 & all real\\
+%        FHK 511 & 4.961 & 11.863, 11.498, 11.181&  all real? \\
+%        FHK 576 & 1.65 & 0.82, 0.62, 4.74, 9.621 & harmonic, beat, real, real\\ %also 4.747 and 9.621 ??
+%        \tableline
+%    \end{tabular}
+%    \label{tab:mp_objs}
+%\end{table*}
 
-The distribution of periods for the sources identified as strictly periodic is shown in Figure~\ref{periodsdist}. 
-There are 46 such stars, constituting $\sim$15\% of the variable sample with reported timescales/periods in Table~\ref{tab:properties}.  The period distribution has a bimodal peak, as well as a skew towards longer periods.  Both features are consistent with the populations of fast and slow rotators discussed in previous young star literature, e.g. \cite{Gallet2013}.
+The distribution of periods for the sources identified as strictly periodic is shown in the lower panel of Figure~\ref{periodsdist}. 
+There are 46 such stars, constituting $\sim$15\% of the variable sample with reported timescales or periods in Table~\ref{tab:properties}.  Their period distribution has a bimodal peak, as well as a skew towards longer periods.  Both features are consistent with the populations of fast and slow rotators discussed in previous young star literature, e.g. \cite{Gallet2013}.
 
-Figure~\ref{periodsdist} also shows the full range of variability timescales, which exhibits a strong peak on the same
-few week timescales covered by the purely rotationally variable stars. The peak is significantly higher though, indicating
-a large quasi-periodic and aperiodic population with additional physical processes that are occurring on similar timescales. 
+Figure~\ref{periodsdist} also shows, in the upper panel, the full range of variability timescales in the sample. 
+This distribution exhibits a strong peak on the same
+few week timescales covered by the purely rotationally variable stars in the lower panel. 
+The peak is significantly higher though, indicating a large quasi-periodic and aperiodic population 
+with additional physical processes that are occurring on similar timescales. 
 The timescale distribution is relatively flat out to longer times.  
 The longer variability patterns, from weeks to months, can be seen in the light curves themselves.  
 We emphasize that, even though these timescales were detected and measured using Lomb-Scargle periodogram techniques, 
-they really are timescales and not true periods.  Other methods for quantifying timescales in aperiodic light curves are discussed in \cite{Findeisen2015}. 
+they really are approximate timescales for photometric variability, and not true periods.  
+{\bf Particularly in cases of high $Q$ values (see below) in Table~\ref{tab:properties}, these timescales are less trustworthy.}
+Other methods for quantifying timescales in aperiodic light curves are discussed in \cite{Findeisen2015}. 
 
 One particular source with a long period or timescale is FHK 36, which is classified as a quasi-periodic dipper (QPD)  with a timescale of 31 days. In this case, the phased light curve shows substantially variable depth dips that are more consistent with material orbiting in a disk, than with e.g. a stellar rotation period.
 
@@ -335,7 +349,9 @@ Quasi-periodicity is defined as
 \end{equation}
 
 \noindent where $\sigma_{\mathrm{phot}}$ is the measurement uncertainty, $\sigma^{2}_{m}$ is the variance of the original light curve, and $\sigma^{2}_{\mathrm{resid}}$ is the variance of the residual light curve after the smoothed dominant periodic signal has been subtracted.
-We take $\sigma_{phot}$ as the mean photometric error for all observations in an object's light curve, multiplied by a factor of 1.25 to account for an initial compression of Q values between 0 and $\sim0.6$ that we noticed early in our investigation. We attribute this compression to two effects: 1) the likely underestimate of reported photometric errors, and 2) the cadence dependence of the Q metric, which we discuss in Appendix B. For $\sigma^{2}_{\mathrm{resid}}$, we calculate the residual light curve by adopting a modified version of the periodicity routine described in Section \ref{sec:periodic}. The light curve is phased to the period with the highest power, after potentially aliased periods have been rejected.  Then, following \cite{Bredall2020}, we mitigate for edge effects by concatenating three cycles of the period and convolving with a boxcar window of width $25\%$ of the period, effectively smoothing the light curve by a factor of four. Finally, we subtract the middle cycle of this model light curve from the folded light curve and compute $\sigma_{\mathrm{resid}}$ as the standard deviation of this residual curve. 
+We take $\sigma_{phot}$ as the mean photometric error for all observations in an object's light curve, multiplied by a factor of 1.25 to account for an initial compression of Q values between 0 and $\sim0.6$ that we noticed early in our investigation. We attribute this compression to two effects: 1) the likely underestimate of reported photometric errors, and 2) the cadence dependence of the Q metric, which we discuss in Appendix C. For $\sigma^{2}_{\mathrm{resid}}$, we calculate the residual light curve by adopting a modified version of the periodicity routine described in Section \ref{sec:periodic}. The light curve is first phased to the best period. 
+%with the highest power, after potentially aliased periods have been rejected.  
+Then, following \cite{Bredall2020}, we mitigate for edge effects by concatenating three cycles of the period and convolving with a boxcar window of width $25\%$ of the period, effectively smoothing the light curve by a factor of four. Finally, we subtract the middle cycle of this model light curve from the folded light curve and compute $\sigma_{\mathrm{resid}}$ as the standard deviation of this residual curve. 
 The resulting $Q$ values are expected to fall between $0$ (strong periodicity with low residual noise) and $1$ (completely stochastic behavior). 
 
 Flux asymmetry is defined as 
@@ -353,7 +369,7 @@ We then distinguish YSO light curves as populating nine categories, following \c
 In general, the objects are classified based on their $Q$ and $M$ values and then validated by visual examination, but there are cases where we adjust the classification to defer to the human eye for definitive categorization. This is especially prevalent in cases near the morphological boundaries in the $Q-M$ plane. 
 
 Periodic variables (P) are defined as objects with significant periods from Section \ref{sec:periodic} that have $-0.25<M<0.25$ and $Q<0.45$. We discuss our rationale for using a higher $Q$ boundary for periodic objects than adopted in previous publications \citep[e.g.][]{Cody2018, Bredall2020}, in Section \ref{sec:q}.  The variability of the strictly periodic objects is most commonly interpreted as driven by rotational modulation due to the presence of star spots, and the periods derived are thus considered measures of stellar rotation \citep[e.g.][]{Rebull2008}.  Objects with higher $Q$ 
-are designated as quasi-periodic with a variability origin that is {\bf perhaps related to stellar rotation or star-disk interaction, but} not dominated by the starspot modulation signal, which is partially obfuscated.
+are designated as quasi-periodic with a variability origin that is {\bf perhaps related to stellar rotation or the star-disk interaction region, but} not dominated by the starspot modulation signal which is partially obfuscated {\bf in the stronger inner disk cases}.
 Multi-periodic (MP) objects exhibit more than one distinct period, that is not a beat or alias.  One common explanation for these is star spot modulation in binary pairs \citep[e.g.][]{Stauffer2018,Maxted2018}. 
 
 Quasi-periodic symmetric (QPS) variables are defined as having $-0.25<M<0.25$ and $0.45<Q<0.87$. The variability of these objects is believed to have two possible sources. The first is a combination of purely periodic spot behavior with longer timescale aperiodic changes (e.g. variable accretion), and the second is a single variability process that is unstable from cycle to cycle \citep{Cody2014}. 
@@ -372,14 +388,24 @@ Finally, we assign $2$ objects to the unclassifiable (U) category because we wer
 
 The results of this classification scheme are reported in Table \ref{tab:properties} for individual sources. Additionally, all stars in the variable sample are plotted in the $Q-M$ plane in Figure \ref{qvsm}, where they are differentiated in color by the assigned morphological class.    We note that some objects have secondary classifications in Table \ref{tab:properties} when more than one light curve type is evident in the data, but they are plotted according to the primary classification.  The distribution of both primary and secondary variability classes is summarized in Table \ref{tab:classesSummary}. 
 
-Secondary classifications are typically long-timescale (L), representing objects that exhibit a strong primary behavior such as short timescale periodicity, quasi-periodic behavior, or bursting,  along with a pronounced long-term trend e.g. brightening or dimming, or lasting changes in variability amplitude, etc.   Two objects are designated as periodic in their secondary classification; both have robust periods, but the $M$ metric reveals that the full amplitude of the light curve is caused by bursty behavior.  
-For $\mathrm{GDR1}\mathrm{\;} 2162127974652045056$,  also  known as V1716 Cyg,  the behavior over most of the light curve is plainly sinusoidal, but for a little over one year of our time series, there is continuous bursting at the 1 mag level. 
-The source further distinguishes itself by having a W UMa-like phased lightcurve, even though it is a fairly secure kinematic and spectroscopic member of the NAP region.
-For the other object, FHK 496, bursting behavior is ubiquitous throughout the light curve, and causes scatter at the 0.4 mag level above the clear periodic signal.
+Secondary classifications are typically long-timescale (L), representing objects that exhibit a strong primary behavior such as short timescale periodicity, quasi-periodic behavior, or bursting,  along with a pronounced long-term trend e.g. brightening or dimming, or lasting changes in variability amplitude, etc.   
+Two objects, V1716 Cyg 
+\footnote{{\bf For V1716 Cyg,  %$\mathrm{GDR1}\mathrm{\;} 2162127974652045056$
+the behavior over most of the light curve is plainly periodic, but for a little over one year of our time series there is superposed continuous bursting at the 1 mag level. \cite{Findeisen2013} also observed bursts in their earlier lightcurve.  
+The source further distinguishes itself in having -- aside from the bursts -- a W UMa-like phased lightcurve.
+It is, however, a fairly secure kinematic and spectroscopic member of the NAP region, also displaying x-ray activity, lithium absorption, and infrared excess.    \cite{Fang2020} reported a spectral type of M1.6 with negligible veiling.
+W Uma stars are contact or near-contact binaries with two cool components that are both overflowing their Roche lobes; 
+they are unknown among pre-main sequence stars, but in principle are not implausible given the large pre-main sequence radii. }}
+(FHK 437) 
+and FHK 496 
+\footnote{In FHK 496, bursting behavior is ubiquitous throughout the light curve, and causes scatter at the 0.4 mag level above the clear periodic signal.})
+are designated as periodic in their secondary classification; both have robust periods, but the $M$ metric reveals that the full amplitude of the light curve is caused by bursty behavior.  
+
+
 
 \begin{table}
     \centering
-    \caption{Distribution of primary and secondary light curve morphology classifications for objects in our variable sample. Most sources have a single dominant variability type, but $\sim$14\% of the variable sample merited secondary classifications. \textbf{Row values have been rounded.}}
+    \caption{Distribution of primary and secondary light curve morphology classifications for objects in our variable sample. Most sources have a single dominant variability type, but $\sim$14\% of the variable sample merited secondary classifications. \textbf{Values in individual rows have been rounded.}}
     \begin{tabular}{c c c}
     \tableline
     \tableline
@@ -395,7 +421,7 @@ For the other object, FHK 496, bursting behavior is ubiquitous throughout the li
     Stochastic & 11.5 & - \\
     Unclassifiable & 0.3 & - \\
     \tableline
-    Total & 100.0 & 15.8 \\
+    Total & 100.1 & 15.8 \\
     \tableline
     \end{tabular}
     \label{tab:classesSummary}
@@ -447,8 +473,9 @@ The regression assumes that points lie along a line in the $g$ vs. $g-r$ plane, 
 To alleviate the effect of outliers, we performed the fits on the middle 95\% of the CMD spans in $g$ and $g-r$. 
 
 After computing the best fit slopes in $g$ vs $g-r$, we define slope angles as the inverse tangent, with the angles in degrees increasing clockwise from $0\degree$ (corresponding to color variability with no associated $g$-band variability) to $90\degree$ (colorless $g$-band variability). To compute errors on the best fit angles, we adopt the \texttt{pYSOVAR} \citep{Guenther2014,Poppenhaeger2015} function \texttt{fit\_twocolor\_odr} and consider slope angles with errors less than $10\degree$ to be significant.  These values are reported in Table~\ref{tab:properties}.
-We note that a few sources even exceed $90\degree$ slopes: FHK 101 at $93\degree$,  GDR1 2161843098061857280 at $95\degree$, 
-and FHK 473 at $97.3\degree$.  Each of these sources is a large-amplitude variable, with a Pythagorean vector length in the range of 2-3,
+We note that a few sources even exceed $90\degree$ slopes: FHK 101 at $93\degree$,  2MASS J21004676+4255265. %GDR1 2161843098061857280 
+at $95\degree$,  and FHK 473 at $97.3\degree$.  
+Each of these sources is a large-amplitude variable, with a Pythagorean vector length in the range of 2-3,
 and high $Q$ as well as $M<0$.   
 
 
@@ -461,8 +488,13 @@ and high $Q$ as well as $M<0$.
 \end{figure}
 
 In Figure \ref{vectorlengths}, all significant CMD slope angles are plotted against their CMD vector lengths, following \cite{Poppenhaeger2015}, and differentiated by their flux asymmetry ($M$) classes. There is a sizable span in the CMD vector lengths, with the longest spans limited to the largest slope angles (indicating the largest amplitude and color changes). A wide range of CMD slope angles is also represented, spanning over $45\degree$.   
-The outlier at small slope angle is GDR1 2162932993257907584, which varies over $\sim0.2$ mag in $g-r$ color with very little variation in $g$ brightness; in $r-$band it is a low-level burster.  The outlier with vector length $\sim 3$ is GDR1 2162966146109606528, which varies over 2 mag in $g-r$ color and 3 mag in $g$ brightness; it is classified as quasi-periodic symmetric.  Finally, the extreme vector length $\sim$4 source is GDR1 2162939208074527616, an aperiodic dipper.
-We also note GDR1 2162872928138757248, the out-of-family burster with vector length $\sim$3.5; this source was also featured in Figure~\ref{fig:qm_tutorial}.
+The outlier at small slope angle is FHK 280,   %GDR1 2162932993257907584, 
+which varies over $\sim0.2$ mag in $g-r$ color with very little variation in $g$ brightness; in $r-$band it is a low-level burster.  The outlier with vector length $\sim 3$ is FHK 332, %GDR1 2162966146109606528, 
+which varies over 2 mag in $g-r$ color and 3 mag in $g$ brightness; it is classified as quasi-periodic symmetric.  
+Finally, the extreme vector length $\sim$4 source is FHK 238, %GDR1 2162939208074527616, 
+an aperiodic dipper.
+We also note FHK 267, %GDR1 2162872928138757248, 
+the out-of-family burster with vector length $\sim$3.5; this source was also featured in Figure~\ref{fig:qm_tutorial}.
 
 Small slopes, $<35\degree$, are essentially unpopulated, implying a lack of colorless variability.  While likely an astrophysical reality, this could also indicate a bias in our slope determination methods. For example, stars with little to no statistical correlation between variability in magnitude, and variability in color, generally have uncertain slope angles. Such sources are not included in the plot.  However, the full set of slope and vector length determinations includes only 4 (1.2\%)  more sources than the set with $<10\degree$ error that we are plotting. 
 
@@ -577,7 +609,7 @@ In contrast to this adjusting of the $Q$ metric, \cite{Bredall2020} did not adju
 Indeed, prior to tailoring our Q routine to the ZTF data set, we noticed a similar compression and shift of our objects towards the periodic end (low $Q$) of the quasi-periodicity scale, with an absence of objects having $Q > 0.65$.   This would be a very different distribution from the results of \cite{Cody2014} and \cite{Cody2018}, as in both of these studies, the range from Q=0 to Q=1 is densely populated \citep[in fact, exceeding these bounds in][]{Cody2014}.
 
 Given the substantially larger errors and the lower observational cadence associated with ground-based data, significant discrepancies in $Q$ values might be expected when comparing objects studied with space-based versus ground-based telescopes. 
-In Appendix B we investigate in detail the effects that cadence and photometric uncertainty have on $Q$.
+In Appendix C we investigate in detail the effects that cadence and photometric uncertainty have on $Q$.
 
 For our analysis, we opted to follow the methodology of \cite{Cody2018}, tailoring both our morphological boundaries well as our procedure for calculating Q to the nuances of our particular ZTF data set. As stated in \S \ref{5.1}, our adopted Q boundaries are 0.45 and 0.87. We selected these particular values after visually inspecting all variable object light curves, both unfolded and phase-folded, and comparing them to light curves from both \cite{Cody2014} and \cite{Cody2018}.  We assigned the $Q$ boundaries to occur at the most obvious behavioral transitions we noticed in the light curves when ordered by $Q$, and to minimize the number of edge-case objects that we end up re-classifying by eye.  After this visual inspection, approximately $11\%$ of objects were re-classified. 
 
@@ -606,7 +638,7 @@ We do not consider the results of \cite{Bredall2020} from ground-based data in L
 the apparent distortion in their $Q$ distribution towards low values; this may be a sign of the issue we faced in this study
 (\S 5.1) where inflating our photometric errors by 25\% recovered more of the expected range in $Q$ for a young star variable sample.
 There is also the issue of whether ground-based and space-based data sets are comparable.
-As mentioned earlier, we assess the effects of data precision and data cadence on $Q$ in Appendix B.
+As mentioned earlier, we assess the effects of data precision and data cadence on $Q$ in Appendix C.
 
 Relative to the previously studied star forming regions, we find a similar fraction of periodic sources, 
 including the periodic (P) and multi-periodic (MP) classes, at around 15\% of the sample.
@@ -647,13 +679,12 @@ In this work we have studied the variability of young stellar objects in the Nor
     \item[-] The python code used to calculate the $Q$ and $M$ variability metrics is available at \url{https://github.com/HarritonResearchLab/NAPYSOs}.
 \end{itemize}
 
-\begin{acknowledgements}
-We thank Leah Seignourel, Pietro Romussi, and Korgan Atillasoy for their participation in early discussions about this work.
-We also thank John Bredall, Katja Poppenhaeger, and Hans Moritz Günther for assistance with various Python questions, as well as \textbf{Travis Austin for assistance with recovering a significant amount of our work from a damaged virtual machine disk.} Ann Marie Cody provided the K2 light curves that form the basis of Appendix B, as well as valuable advice concerning $Q$.
-This work is based on data from the Zwicky Transient Facility, which is supported by the National Science Foundation under Grant No. AST-1440341 and a collaboration including Caltech, IPAC, the Weizmann Institute for Science, the Oskar Klein Center at Stockholm University, the University of Maryland, the University of Washington, Deutsches ElektronenSynchrotron and Humboldt University, Los Alamos National Laboratories, the TANGO Consortium of Taiwan, the University of Wisconsin at Milwaukee, and Lawrence Berkeley National Laboratories.
-\end{acknowledgements}
+\section{Acknowledgements}
+%\begin{acknowledgements}
+We thank Leah Seignourel, Pietro Romussi, and Korgan Atillasoy for their participation in early discussions about this work. We also thank John Bredall, Katja Poppenhaeger, and Hans Moritz Günther for assistance with various Python questions, as well as \textbf{Travis Austin for assistance with recovering a significant amount of our work from a damaged virtual machine disk.} Ann Marie Cody provided the K2 light curves that form the basis of Appendix C, as well as valuable advice concerning $Q$. This work is based on data from the Zwicky Transient Facility, which is supported by the National Science Foundation under Grant No. AST-1440341 and a collaboration including Caltech, IPAC, the Weizmann Institute for Science, the Oskar Klein Center at Stockholm University, the University of Maryland, the University of Washington, Deutsches ElektronenSynchrotron and Humboldt University, Los Alamos National Laboratories, the TANGO Consortium of Taiwan, the University of Wisconsin at Milwaukee, and Lawrence Berkeley National Laboratories.
+%\end{acknowledgements}
 
-\facility{P48:ZTF, IRSA}
+\facilities{P48:ZTF, IRSA}
 
 \textit{Software:} NumPy \citep{numpy}, Matplotlib \citep{Hunter2007}, Pandas \citep{pandas}, Astropy (\cite{astropy1}, \cite{astropy2}), SciPy \citep{Virtanen2020}, and uncertainties \citep{uncertainties}. 
 
@@ -695,51 +726,8 @@ then the folded light curve subplot is left blank.
 %Objects that are not classified as periodic variables with reported periods have periods of uncertain believability. 
 If the slope angle error is less than ten degrees, then the best fit CMD slope appears in the CMD subplots.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-
-\section{The Influence of Cadence and Photometric Precision on Q}
-The Q and M metrics were developed to quantify stellar variability in high-quality, regularly spaced, photometric time series data taken from space-based platforms.  In this work, we have applied them to lower-precision light curves sampled at irregular intervals,
-taken from the ground.  We assess in this appendix the transferability of these metrics from space-based to ground-based data. To do so, we explore how $Q$ behaves on a $K2$ data set -- specifically the $\sim 100$ young stars in the Taurus region with light curves reported in \cite{Cody2022}, and versions of these data that have been degraded to the cadence and precision typical of our ground-based ZTF data set. 
-
-For each light curve in the Taurus sample observed by $K2$, we began with a baseline $Q$ value that was calculated as in \S5 for the ZTF data.  Then, we down-sampled the observational cadence {\bf of the Kepler/K2 data set} to match the actual time series {\bf time stamps of} the ZTF data set, and recalculated the $Q$ metric.  We then also {\bf adopted} error bars appropriate to the ground-based data, sampling from the empirical error distribution in Figure~\ref{fig:magmagerr}.  We assumed errors of 0.015 and 0.036 mag, which represent the 10th and 90th percentile errors for the ZTF time series data analyzed in this paper. 
-We then recalculated the $Q$ metric based on the down-sampled and error-adjusted Kepler light curves.
-
-%The infrequent observations of ZTF stars’ magnitude could affect the Q significantly. The Lomb Scargle algorithm could detect a period that isn’t there because of how few and spread out the observations are. Additionally, there may be bias in the selection of observations, as they weren’t taken at random, affecting the measurements of the variance of the light curve and residuals. To quantify the effect of infrequent non-randomized selection, we decided to get the Q for 90 Kepler objects and calculate the Q on the 90 Kepler objects’ down-sampled to match the ZTF cadence. The Kepler objects’ observations are taken every 30 minutes, close enough together to get an almost exact light curve. Therefore, the Q metric on the Kepler object will be almost exact, and the frequent observations allowed us to almost perfectly match the ZTF’s cadence of observations. 
-
-\begin{figure*}[htpb]
-\includegraphics[width=0.5\textwidth]{Effect_of_errors.png}
-\centering
-\caption{Effect of light curve precision on the $Q$ metric.   Abscissa shows $Q$ values calculated in the absence of error, while ordinate shows $Q$ values for the same data but including realistic ground-based errors appropriate to our ZTF observations (0.036 mag).
-Lines indicate the relationships shown in the legend.
-Photometric error reduces $Q$ by an amount that likely depends on light curve amplitude relative to the photometric error, and light curve morphology. While the shift is systematic, many stars are unaffected and the slope remains close to unity.}
-\label{test_precision}
-\end{figure*}
-
-
-\begin{figure*}[htpb]
-\includegraphics[width=0.49\textwidth]{2vs5unbounded.png}
-\includegraphics[width=0.49\textwidth]{2vs6unbounded.png}
-\centering
-\caption{Effect of light curve cadence on the $Q$ metric, illustrated for two different values of the light curve precision.
-Abscissa shows $Q$ values calculated at the native cadence of $K2$, while ordinate shows $Q$ values for the same K2 data but down-sampled to the true cadence of our ZTF observations over the same limited time interval. Lines indicate the relationships shown in the legend. 
-Cadence has a large effect on Q, with more scatter towards higher $Q$.   The effects of error are apparent, with overestimated errors leading to a drop in $Q$. The values go negative for some stars, particularly in the higher error (right) panel, causing them to fall outside the bounds of the plot.}
-\label{test_cadence}
-\end{figure*}
-
-Considering the influence of photometric uncertainty on the derived $Q$,  Figure~\ref{test_precision} illustrates for the down-sampled data, that the introduction of error lowers the $Q$ values. This is the expected behavior since the photometric error is subtracted from both the numerator and the denominator in Eq.~\ref{eq:defq}. However, there are a few cases in which the variance of the residuals is so small, that the numerator goes negative. Similarly, the actual variance of the light curve can be smaller than the mean photometric error, causing $Q$ to be greater than 1.  
-{\bf This happens because, in the $Q$ statistic, we are adding error only to the $\sigma^2_{phot}$ term and are not inflating the actual $\sigma_m$ and $\sigma_{resid}$ terms in Equation 2.  In these simulated cases, the astrophysical variability is smaller than the simulated error, leading to the unphysical values of $Q$.} We have excluded these unphysical values in our linear fit.  
-
-In the simulated ground-based data, including both the precision and the cadence adjustments from space to ground,
-the range of $Q$ values extends from -3.18 to 2.20,  compared to 0.068 - 1.01 for the original high-cadence light curves.
-For the analysis below, we consider only $Q$ between the nominal 0-1 range.
-In Figure~\ref{test_cadence}, we compare $Q$ from the mock ground-based data set (down-sampled, with added errors) to $Q$ from the original, fully sampled and essentially error-free Kepler data set.  There is a clear positive association remaining. However, the relationship is not one-to-one as above when only error was considered. Instead, the relationship flattens out as $Q$ became higher. This can be attributed mostly to the Lomb Scargle algorithm detecting periods that are not actually present, which then affects the calculation of the light curve residual in the Q formalism (Eq.~\ref{eq:defq}). 
-
-We note that the downsampling of the Kepler data stream takes into account only a fraction of the number of data points that were available for calculating $Q$ in the full ZTF time series. A major consideration in this experiment is that the Kepler objects were measured over only about 80 days, while the ZTF objects were observed over 300 days (including data through ZTF DR4). Thus, the actual ZTF periodograms are based on more data than the down-sampled Kepler periodogram analysis. Therefore, the ZTF periodograms and hence the residual light curves are probably a more accurate representation of the period-subtracted residual plot for objects with long timescales. 
-We found that the $Q$ values are fairly accurate when they are low, but became increasingly more inaccurate as the actual Kepler Q increased. This finding should translate over to the actual ZTF objects, i.e. lower $Q$ values are more accurate than higher $Q$ values. 
-Additionally, all of the down-sampled Q values were slightly underestimated, which again is probably true of the ZTF objects as well. 
-
-Overall, this experiment reveals that there are constraints on data quality for assessing $Q$ in various photometric data sets.
-Specifically, while photometric uncertainty is important, lower cadence has a more pronounced affect on $Q$, substantially reducing it for certain categories of variability.
 
 %\section{Anomalously Slow Rotators}  \label{slowRotators}
 \section{A Lesson Regarding True Periods Near the Observing Cadence}  \label{slowRotators}
@@ -806,7 +794,56 @@ For FHK 286, the situation is more ambiguous but we believe the same conclusion 
     \label{fig:anomalous}
 \end{figure}
 
-% see herbs2002 page 518 discussion and figure 6.
+% see herbst2002 page 518 discussion and figure 6.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{The Influence of Cadence and Photometric Precision on Q}
+The Q and M metrics were developed to quantify stellar variability in high-quality, regularly spaced, photometric time series data taken from space-based platforms.  In this work, we have applied them to lower-precision light curves sampled at irregular intervals,
+taken from the ground.  We assess in this appendix the transferability of these metrics from space-based to ground-based data. To do so, we explore how $Q$ behaves on a $K2$ data set -- specifically the $\sim 100$ young stars in the Taurus region with light curves reported in \cite{Cody2022}, and versions of these data that have been degraded to the cadence and precision typical of our ground-based ZTF data set. 
+
+For each light curve in the Taurus sample observed by $K2$, we began with a baseline $Q$ value that was calculated as in \S5 for the ZTF data.  Then, we down-sampled the observational cadence {\bf of the Kepler/K2 data set} to match the actual time series {\bf intervals of} the ZTF data set, and recalculated the $Q$ metric.  We also {\bf adopted} error bars appropriate to the ground-based data, sampling from the empirical error distribution in Figure~\ref{fig:magmagerr}.  In practice we assumed two error values, 0.015 and 0.036 mag, which represent the 10th and 90th percentile errors for the ZTF time series data analyzed in this paper. 
+We then recalculated the $Q$ metric based on the down-sampled and error-adjusted Kepler light curves.
+
+%The infrequent observations of ZTF stars’ magnitude could affect the Q significantly. The Lomb Scargle algorithm could detect a period that isn’t there because of how few and spread out the observations are. Additionally, there may be bias in the selection of observations, as they weren’t taken at random, affecting the measurements of the variance of the light curve and residuals. To quantify the effect of infrequent non-randomized selection, we decided to get the Q for 90 Kepler objects and calculate the Q on the 90 Kepler objects’ down-sampled to match the ZTF cadence. The Kepler objects’ observations are taken every 30 minutes, close enough together to get an almost exact light curve. Therefore, the Q metric on the Kepler object will be almost exact, and the frequent observations allowed us to almost perfectly match the ZTF’s cadence of observations. 
+
+\begin{figure*}[htpb]
+\includegraphics[width=0.5\textwidth]{Effect_of_errors.png}
+\centering
+\caption{Effect of light curve precision on the $Q$ metric.   Abscissa shows $Q$ values calculated in the absence of error, while ordinate shows $Q$ values for the same data but including realistic ground-based errors appropriate to our ZTF observations (0.036 mag).
+Lines indicate the relationships shown in the legend.
+Photometric error reduces $Q$ by an amount that likely depends on light curve amplitude relative to the photometric error, and light curve morphology. While the shift is systematic, many stars are unaffected and the slope remains close to unity.}
+\label{test_precision}
+\end{figure*}
+
+
+\begin{figure*}[htpb]
+\includegraphics[width=0.49\textwidth]{2vs5unbounded.png}
+\includegraphics[width=0.49\textwidth]{2vs6unbounded.png}
+\centering
+\caption{Effect of light curve cadence on the $Q$ metric, illustrated for two different values of the light curve precision.
+Abscissa shows $Q$ values calculated at the native cadence of $K2$, while ordinate shows $Q$ values for the same K2 data but down-sampled to the true cadence of our ZTF observations over the same limited time interval. Lines indicate the relationships shown in the legend. 
+Cadence has a large effect on Q, with more scatter towards higher $Q$.   The effects of error are apparent, with overestimated errors leading to a drop in $Q$. The values go negative for some stars, particularly in the higher error (right) panel, causing them to fall outside the bounds of the plot.}
+\label{test_cadence}
+\end{figure*}
+
+Considering the influence of photometric uncertainty on the derived $Q$,  Figure~\ref{test_precision} illustrates for the down-sampled data, that the introduction of error lowers the $Q$ values. This is the expected behavior since the photometric error is subtracted from both the numerator and the denominator in Eq.~\ref{eq:defq}. However, there are a few cases in which the variance of the residuals is so small, that the numerator goes negative. Similarly, the actual variance of the light curve can be smaller than the mean photometric error, causing $Q$ to be greater than 1.  
+{\bf This happens because, in the $Q$ statistic, we are adding error only to the $\sigma^2_{phot}$ term and are not inflating the actual $\sigma_m$ and $\sigma_{resid}$ terms in Equation 2.  In these simulated cases, the astrophysical variability is smaller than the simulated error, leading to the unphysical values of $Q$.} We have excluded these unphysical values in our linear fit.  
+
+In the simulated ground-based data, including both the precision and the cadence adjustments from space to ground,
+the range of $Q$ values extends from -3.18 to 2.20,  compared to 0.068 - 1.01 for the original high-cadence light curves.
+For the analysis below, we consider only $Q$ between the nominal 0-1 range.
+In Figure~\ref{test_cadence}, we compare $Q$ from the mock ground-based data set (down-sampled, with added errors) to $Q$ from the original, fully sampled and essentially error-free Kepler data set.  There is a clear positive association remaining. However, the relationship is not one-to-one as above when only error was considered. Instead, the relationship flattens out as $Q$ became higher. This can be attributed mostly to the Lomb Scargle algorithm detecting periods that are not actually present, which then affects the calculation of the light curve residual in the Q formalism (Eq.~\ref{eq:defq}). 
+
+We note that the downsampling of the Kepler data stream takes into account only a fraction of the number of data points that were available for calculating $Q$ in the full ZTF time series. A major consideration in this experiment is that the Kepler objects were measured over only about 80 days, while the ZTF objects were observed over 300 days (including data through ZTF DR4). Thus, the actual ZTF periodograms are based on more data than the down-sampled Kepler periodogram analysis. Therefore, the ZTF periodograms and hence the residual light curves are probably a more accurate representation of the period-subtracted residual plot for objects with long timescales. 
+We found that the $Q$ values are fairly accurate when they are low, but became increasingly more inaccurate as the actual Kepler Q increased. This finding should translate over to the actual ZTF objects, i.e. lower $Q$ values are more accurate than higher $Q$ values. 
+Additionally, all of the down-sampled Q values were slightly underestimated, which again is probably true of the ZTF objects as well. 
+
+Overall, this experiment reveals that there are constraints on data quality for assessing $Q$ in various photometric data sets.
+Specifically, while photometric uncertainty is important, lower cadence has a more pronounced affect on $Q$, substantially reducing it for certain categories of variability.
+
+
 
 \end{appendix}
 
