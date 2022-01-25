@@ -5,6 +5,7 @@
 ### order for 1/23/2022
 * figure 12 period recovery (and change text), fix figs 7 & 8, do supplimentary plots, choose examples, upload tar and examples 
 
+- [ ] go back and fix a lot of things...some of the new ids are formatted weird
 
 - [ ] fix references ?!? big O denotes to do
 - [ ] check all text references and all figures for things to change
