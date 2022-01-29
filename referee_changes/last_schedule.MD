@@ -11,4 +11,4 @@
 # Thaddaeus to Do 
 - [ ] Add results file to github with link in paper
 - [ ] Check LaTeX for wrong IDs
-- [ ] Fix figure 12 (old code is at ```.\recovered\2.0\efforts\august21\aug23-29\froebrich\froebrich_periods.py```), new, almost fixed file is at  
+- [ ] Fix figure 12 (old code is at ```.\recovered\2.0\efforts\august21\aug23-29\froebrich\froebrich_periods.py```), new, almost fixed file is at ```referee_changes/redo_period_recovery/remake_plot.py ```
