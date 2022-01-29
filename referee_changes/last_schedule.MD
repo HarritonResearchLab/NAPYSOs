@@ -1,5 +1,6 @@
 # Thaddaeus To Do (First)
 - [ ] Fix the renamed file given spaces issue...put it into overleaf as LaTeX file
+   * "In particuar, we should not have any GDR1 or PSO numbers left, or that DPP2017_409 (though perhaps that one can stay….). From line 150 on down in the .csv, there are still some name updates needed."
 - [ ] get list of figures that need to be changed, choose which for Owen to do 
 # Owen To Do (After Above is Done)
 - [ ] Make new appendix plots with exact same format as old ones, but names changed to new ones (see appendix A -- each figure is three square subplots, left is light curve, middle is phase folded (if the period is not nan), right is cmd.
