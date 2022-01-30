@@ -5,10 +5,10 @@
 ### order for 1/23/2022
 * figure 12 period recovery (and change text), fix figs 7 & 8, do supplimentary plots, choose examples, upload tar and examples 
 
-- [ ] go back and fix a lot of things...some of the new ids are formatted weird
+- [x] go back and fix a lot of things...some of the new ids are formatted weird
 
-- [ ] fix references ?!? big O denotes to do
-- [ ] check all text references and all figures for things to change
+- [x] fix references ?!? big O denotes to do
+- [x] check all text references and all figures for things to change
     * text has been fixed, figs 5,7,8 need to be fixed 
 - [x] change tabular information about them 
 
@@ -18,12 +18,12 @@
 - [x] update the period / timescales plots in figure 4 with updated periods / classes now    
 - [x] update table 4 with new dist %s calculated on january final results    
 - [x] update figure 6 with new data     
-- [ ] update figure 12??  
+- [x] update figure 12??  
     * old file is located at `.\recovered\2.0\efforts\august21\aug23-29\froebrich\froebrich_periods.py`
 - [x] check that figures with references qs haven't had them changed    
     * if they have fix them :)    
 - [x] update infrared plots with new qm data 
-- [ ] O figure 13   
+- [x] O figure 13   
     * remake all the appendix plots with new data      
     * replace the old plots in fig 13 with new ones ... or choose new ones    
     * add zip file of all the plots into overleaf
