@@ -1,4 +1,4 @@
-def q_timeline(ids, data_temp, qs, plot_path):
+def q_timeline(ids, data_temp, qs, plot_path, new_ids):
     # Import(s)
     import numpy as np
     import matplotlib.pyplot as plt
@@ -98,7 +98,7 @@ def q_timeline(ids, data_temp, qs, plot_path):
     first_ax.scatter(phased_dates, first_mags, s=6, color = "#408ee0", edgecolor='black', linewidths=0.2, marker='o')
     first_ax.scatter(phased_dates_cycle_2, first_mags, s=6, color = "#408ee0", edgecolor='black', linewidths=0.2, marker='o')
     
-    first_ax.set_title(ids[0].replace('_',' '), fontsize=9)
+    first_ax.set_title(new_ids[0].replace('_',' '), fontsize=9)
     
     ## THE REST OF THE PLOTS
     second_data = get_data(ids[1], data_temp)
@@ -108,7 +108,7 @@ def q_timeline(ids, data_temp, qs, plot_path):
     
     second_ax.errorbar(second_mjds, second_mags, yerr=second_magerrs, color='#408ee0', lw=0, elinewidth=0.25, alpha=0.4)
     second_ax.scatter(second_mjds, second_mags, s=6, color='#408ee0', edgecolor='black', linewidths=0.2, marker='o')    
-    second_ax.set_title(ids[1].replace('_',' '), fontsize=9)
+    second_ax.set_title(new_ids[1].replace('_',' '), fontsize=9)
     
     third_data = get_data(ids[2], data_temp)
     third_mjds = third_data[0]
@@ -117,14 +117,14 @@ def q_timeline(ids, data_temp, qs, plot_path):
     
     third_ax.errorbar(third_mjds, third_mags, yerr=third_magerrs, color='#408ee0', lw=0, elinewidth=0.25, alpha=0.4)
     third_ax.scatter(third_mjds, third_mags, s=6, color='#408ee0', edgecolor='black', linewidths=0.2, marker='o')    
-    third_ax.set_title(ids[2].replace('_',' '), fontsize=9)
+    third_ax.set_title(new_ids[2].replace('_',' '), fontsize=9)
     
     plt.subplots_adjust(hspace=0.05, wspace=0.4)
 
     #plt.show()
     plt.savefig(plot_path, bbox_inches='tight', dpi=400)
 
-def m_timeline(ids, data_temp, ms, plot_path): 
+def m_timeline(ids, data_temp, ms, plot_path, new_ids): 
     # Import(s)
     import numpy as np
     import matplotlib.pyplot as plt
@@ -204,7 +204,7 @@ def m_timeline(ids, data_temp, ms, plot_path):
     
     first_ax.errorbar(first_mjds, first_mags, yerr=first_magerrs, color='#408ee0', lw=0, elinewidth=0.25, alpha=0.4)
     first_ax.scatter(first_mjds, first_mags, s=6, color='#408ee0', edgecolor='black', linewidths=0.2, marker='o')    
-    first_ax.set_title(ids[0].replace('_',' '), fontsize=9)
+    first_ax.set_title(new_ids[0].replace('_',' '), fontsize=9)
         
     second_data = get_data(ids[1], data_temp)
     second_mjds = second_data[0]
@@ -213,7 +213,7 @@ def m_timeline(ids, data_temp, ms, plot_path):
     
     second_ax.errorbar(second_mjds, second_mags, yerr=second_magerrs, color='#408ee0', lw=0, elinewidth=0.25, alpha=0.4)
     second_ax.scatter(second_mjds, second_mags, s=6, color='#408ee0', edgecolor='black', linewidths=0.2, marker='o')    
-    second_ax.set_title(ids[1].replace('_',' '), fontsize=9)
+    second_ax.set_title(new_ids[1].replace('_',' '), fontsize=9)
     
     third_data = get_data(ids[2], data_temp)
     third_mjds = third_data[0]
@@ -222,7 +222,7 @@ def m_timeline(ids, data_temp, ms, plot_path):
     
     third_ax.errorbar(third_mjds, third_mags, yerr=third_magerrs, color='#408ee0', lw=0, elinewidth=0.25, alpha=0.4)
     third_ax.scatter(third_mjds, third_mags, s=6, color='#408ee0', edgecolor='black', linewidths=0.2, marker='o')    
-    third_ax.set_title(ids[2].replace('_',' '), fontsize=9)
+    third_ax.set_title(new_ids[2].replace('_',' '), fontsize=9)
     
     plt.subplots_adjust(hspace=0.05, wspace=0.4)
 
@@ -231,14 +231,17 @@ def m_timeline(ids, data_temp, ms, plot_path):
 
     
 q_ids = ['GDR1_2162251394832460672', 'GDR1_2163140315626343168', 'FHK_348'] 
-data_temp = 'data/+++_r.csv'   
-qs = [0.155, 0.473, 0.956]
-q_plot_path = 'q_timeline.png'
+new_q_ids = ['FHK_446','LkHA_149', 'FHK_348']
 
-#q_timeline(q_ids, data_temp, qs, q_plot_path)
+data_temp = './recovered/2.0/data/AUGUST_5th/light_curves/+++_r.csv'   
+qs = [0.155, 0.473, 0.956]
+q_plot_path = './referee_changes/new_names/new_figs/q_timeline.png'
+
+q_timeline(q_ids, data_temp, qs, q_plot_path, new_q_ids)
 
 m_ids = ['GDR1_2162872928138757248', '2MASS_J20523394+4429168', 'FHK_577']
+new_m_ids = ['FHK_267', '2MASS_J20523394+4429168', 'FHK_577']
 ms = [-1.1991309270389323, 0.08255161814737327, 0.8993104086930837]
-m_plot_path = '/home/thaddaeus/FMU/HRL/LAH2.0/efforts/september21/20-26/plots_for_paper'+'/m_timeline.png'
+m_plot_path = './referee_changes/new_names/new_figs/m_timeline.png'
 
-m_timeline(m_ids, data_temp, ms, m_plot_path)
+m_timeline(m_ids, data_temp, ms, m_plot_path, new_m_ids)

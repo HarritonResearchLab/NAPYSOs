@@ -217,7 +217,7 @@ def plot_comparisons(fro_csv, bhard_csv):
     
 our_results = './referee_changes/new_names/renamed.csv'
 froebrich_raw = './recovered/2.0/efforts/august21/aug23-29/froebrich/froebrich_raw_data.txt'
-outfile = './referee_changes/redo_period_recoverybhard_matched.csv'
+outfile = './referee_changes/redo_period_recovery/bhard_matched.csv'
 bhard_csv = './recovered/2.0/efforts/kappa/Bhardwaj_comparison/Bhardwaj_results.csv'
 
 

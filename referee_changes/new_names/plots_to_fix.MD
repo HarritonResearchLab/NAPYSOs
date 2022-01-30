@@ -1,10 +1,14 @@
-## fig 5
+## fig 5 -- fixed
 GDR1_2162872928138757248 --> FHK_267
 GDR1_2162251394832460672 --> FHK_446
 GDR1_2163140315626343168 --> LkHA_149
 
-## fig 7
+
+## fig 7 -- fixed
 2MASS_J20582381+4353114 --> LkHA_188
 
-## fig 8
+## fig 8 -- fixed
 2MASS_J20512059+4420322 --> FHK_557
+
+
+# *NOTE*: LC and CMD file names are set to old ones!

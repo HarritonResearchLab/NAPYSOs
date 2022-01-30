@@ -12,13 +12,13 @@ def sig_round(val, precision):
 
     return str(float(sig_per))
 
-df = pd.read_csv('./referee_changes./JANUARY_FINAL_RESULTS./JANUARY_FINAL_RESULTS.csv')
-df = df.sort_values(by='ID')
+df = pd.read_csv('./referee_changes/new_names/renamed.csv')
+df = df.sort_values(by='preferred_name')
 
-ids = np.array([i.replace('_', ' ') for i in df['ID']])
+ids = np.array([i.replace('_', ' ') for i in df['preferred_name']])
 ras = [str(round(i, 5)) for i in df['RA']]
 decs = [str(round(i, 5)) for i in df['DEC']]
-periods = list(df['PER'].fillna('-'))
+periods = list(df['period'].fillna('-'))
 
 
 for index, i in enumerate(periods): 
@@ -27,13 +27,13 @@ for index, i in enumerate(periods):
 
 qs = [str(round(i, 2)) for i in df['Q']]
 ms = [str(round(i, 2)) for i in df['M']]
-nus = [str(round(i, 4)) for i in df['NU']]
-rs = [str(round(i, 2)) for i in df['rMean']]
+nus = [str(round(i, 4)) for i in df['nu']]
+rs = [str(round(i, 2)) for i in df['r_mag']]
 primaries = [i.upper() for i in df['primary_class']]
 secondaries = [i.upper() for i in df['secondary_class'].fillna('-')]
 
-angles = np.array(df['angle']).astype(object)
-angle_errs = np.array(df['angle error'])
+angles = np.array(df['cmd_angle']).astype(object)
+angle_errs = np.array(df['angle_error'])
 
 for index, i in enumerate(angle_errs): 
     if angles[index] < 0: 

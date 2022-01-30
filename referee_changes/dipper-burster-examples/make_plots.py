@@ -5,9 +5,7 @@
 # with a normal extinction law in the g vs g-r color magnitude diagram
 # is 3.52 to 4.10
 
-
-
-def slopes_demo_plot(ids, lc_dir, cmd_dir, odr_file, plot_class):
+def slopes_demo_plot(ids, lc_dir, cmd_dir, odr_file, plot_class, new_ids):
     # Import(s)
     import os 
     import numpy as np
@@ -36,7 +34,7 @@ def slopes_demo_plot(ids, lc_dir, cmd_dir, odr_file, plot_class):
         axs[0, i].set_ylabel('r (mag)', fontsize=8)
         axs[0, i].set_xlabel('Time (MJD)', fontsize=8)
         
-        lc_df = pd.read_csv(os.path.join(lc_dir, (ids[i]+'_r.csv')))
+        lc_df = pd.read_csv(lc_dir+'/'+ids[i]+'_r.csv')
         mjds = np.array(lc_df['mjd'])
         mags = np.array(lc_df['mag'])
         magerrs = np.array(lc_df['magerr'])
@@ -50,7 +48,7 @@ def slopes_demo_plot(ids, lc_dir, cmd_dir, odr_file, plot_class):
         axs[0, i].xaxis.set_major_locator(ticker.MultipleLocator(200))
         
         
-        cmd_df = pd.read_csv(os.path.join(cmd_dir, (ids[i]+'_cmd.csv')))
+        cmd_df = pd.read_csv(cmd_dir+'/'+ids[i]+'_cmd.csv')
         
         grs = np.array(cmd_df['color'])
         gs = np.array(cmd_df['g_mag'])
@@ -106,25 +104,27 @@ def slopes_demo_plot(ids, lc_dir, cmd_dir, odr_file, plot_class):
             axs[j, i].tick_params(which='both', bottom=True, top=True, left=True, right=True)
             axs[j, i].tick_params(labelbottom=True, labeltop=False, labelleft=True, labelright=False)
             axs[j, i].tick_params(axis='both', labelsize=8)
-            axs[j, i].set_title(ids[i].replace('_', ' '), fontsize=8)
+            axs[j, i].set_title(new_ids[i].replace('_', ' '), fontsize=8)
             axs[j, i].xaxis.set_minor_locator(AutoMinorLocator())
             axs[j, i].yaxis.set_minor_locator(AutoMinorLocator())
         
     plt.subplots_adjust(wspace=0.25, hspace=0.45)
-    file_name = 'slopes_gallery_'+plot_class+'_.png'
+    file_name = './referee_changes/new_names/new_figs/slopes_gallery_'+plot_class+'_.png'
     plt.savefig(file_name, bbox_inches='tight', dpi=250)
     #plt.show()
 
 
 odr_file = 'https://raw.githubusercontent.com/HarritonResearchLab/NAPYSOs/main/referee_changes/odr-redux/odr_results.csv'
-lc_dir = r'C:\Users\Research\Documents\GitHub\NAPYSOs\recovered\2.0\data\AUGUST_5th\light_curves'
-cmd_dir = r"C:\Users\Research\Documents\GitHub\NAPYSOs\referee_changes\color-mag\reprocessing\cmd_files"
+lc_dir = './recovered/2.0/data/AUGUST_5th/light_curves'
+cmd_dir = "./referee_changes/color-mag/reprocessing/cmd_files/cmd_files"
 
 ### Bursters 
 ids_b = ['FHK_32', '2MASS_J20512059+4420322'] # ['','FHK_142'] 
-slopes_demo_plot(ids=ids_b, lc_dir=lc_dir, cmd_dir=cmd_dir, odr_file = odr_file, plot_class='b')
+new_ids_b = ['FHK_32','FHK_557']
+slopes_demo_plot(ids=ids_b, lc_dir=lc_dir, cmd_dir=cmd_dir, odr_file = odr_file, plot_class='b', new_ids=new_ids_b)
 
 ### dippers
 ids_qpd = ['2MASS_J20582381+4353114','FHK_163']
-slopes_demo_plot(ids=ids_qpd, lc_dir=lc_dir, cmd_dir=cmd_dir, odr_file = odr_file, plot_class='d')
+new_ids_d = ['LkHA_188', 'FHK_163']
+slopes_demo_plot(ids=ids_qpd, lc_dir=lc_dir, cmd_dir=cmd_dir, odr_file = odr_file, plot_class='d', new_ids=new_ids_d)
 

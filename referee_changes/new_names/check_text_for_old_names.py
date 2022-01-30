@@ -55,7 +55,7 @@ def edit_whole_file():
 
 #edit_whole_file()
 
-ids_to_check =['GDR1_2162872928138757248', '2MASS_J20523394+4429168', 
+fig_5_ids =['GDR1_2162872928138757248', '2MASS_J20523394+4429168', 
                'FHK_577', 'GDR1_2162251394832460672', 'GDR1_2163140315626343168',
                'FHK_348'] # issues noted
 
@@ -66,4 +66,9 @@ fig_8_ids = ['FHK_32', '2MASS_J20512059+4420322'] # issues noted
 
 fig_7_ids = ['FHK_163', '2MASS_J20582381+4353114'] # issues noted
 
-check_test(fig_7_ids)
+nu_id = [['GDR1_2162947420052773760']]
+
+
+check_test(fig_8_ids)
+
+#check_test(fig_7_ids)
