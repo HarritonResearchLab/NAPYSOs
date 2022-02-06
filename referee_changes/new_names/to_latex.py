@@ -12,15 +12,13 @@ def sig_round(val, precision):
 
     return str(float(sig_per))
 
-df = pd.read_csv('./referee_changes/new_names/renamed.csv')
+df = pd.read_csv('./results/meta_data.csv')
 df = df.sort_values(by='preferred_name', ascending=False)
-
 
 ids = np.array([i.replace('_', ' ') for i in df['preferred_name']])
 ras = [str(round(i, 5)) for i in df['RA']]
 decs = [str(round(i, 5)) for i in df['DEC']]
 periods = list(df['period'].fillna('-'))
-
 
 for index, i in enumerate(periods): 
     if i!='-': 
@@ -49,7 +47,7 @@ for index, i in enumerate(angle_errs):
 zipped = list(zip(ids, ras, decs, periods, 
                   qs, ms, nus, rs, primaries, secondaries, angles))
 
-tex_path = './referee_changes/new_names/table_2_body.tex'
+tex_path = './referee_changes/new_names_redux/table_2_body.tex'
 
 latex_df = pd.DataFrame(zipped).to_latex(buf=tex_path, index=False)
 

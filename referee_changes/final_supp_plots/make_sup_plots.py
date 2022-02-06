@@ -250,7 +250,7 @@ make_missing(['GDR1_2162123198648385024'],
              [27.117147485866408])
 '''
  
-cmd_results = './results/meta_data.csv'
-plot_dir = './referee_changes/final_supp_plots/all_plots/'
+cmd_results = './referee_changes/new_names_redux/redone_metadata.csv'
+plot_dir = './referee_changes/new_names_redux/FINAL_SUPP_PLOTS/'
 
 make_sup_plots(cmd_results, plot_dir)
