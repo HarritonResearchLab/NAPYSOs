@@ -26,6 +26,7 @@ def make_sup_plots(cmd_results, plot_dir):
     ignore_ids = np.array([i.replace('.png', '') for i in os.listdir(plot_dir)])
     ids = np.setxor1d(ids, ignore_ids)
     '''
+    
     for id, new_id, per, qm_class, q, m, slope, angle_err in tqdm(zip(
         ids, new_ids, pers, classes, qs, ms, slopes, slope_angle_errors)):
         
@@ -250,7 +251,7 @@ make_missing(['GDR1_2162123198648385024'],
              [27.117147485866408])
 '''
  
-cmd_results = './referee_changes/new_names_redux/redone_metadata.csv'
+cmd_results = './results/results.csv'
 plot_dir = './referee_changes/new_names_redux/FINAL_SUPP_PLOTS/'
 
 make_sup_plots(cmd_results, plot_dir)

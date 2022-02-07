@@ -12,7 +12,7 @@ def sig_round(val, precision):
 
     return str(float(sig_per))
 
-df = pd.read_csv('./results/meta_data.csv')
+df = pd.read_csv('./results/results.csv')
 df = df.sort_values(by='preferred_name', ascending=False)
 
 ids = np.array([i.replace('_', ' ') for i in df['preferred_name']])

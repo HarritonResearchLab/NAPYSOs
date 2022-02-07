@@ -99,7 +99,7 @@ def make_qm_plot(results_file, q_bounds, plot_path):
         lgnd.legendHandles[i]._sizes = [18]
     
     #plt.show()
-    plt.savefig('updated_qm_plot.png', dpi=300, bbox_inches='tight')
+    plt.savefig('./referee_changes/qm_plot/updated_qm_plot.png', dpi=300, bbox_inches='tight')
 
 def make_scaled_qm_plot(results_file, q_bounds, plot_path): 
     # Import(s)
@@ -208,8 +208,8 @@ def make_scaled_qm_plot(results_file, q_bounds, plot_path):
     for i in range(8): 
         lgnd.legendHandles[i]._sizes = [18]
     
-    #plt.show()
-    plt.savefig('referee_changes/qm_plot/updated_qm_plot.png', dpi=300, bbox_inches='tight')
+    plt.show()
+    #plt.savefig('referee_changes/qm_plot/updated_qm_plot.png', dpi=300, bbox_inches='tight')
     
 
 def change_scaling(results_file): 
@@ -230,6 +230,7 @@ def change_scaling(results_file):
     log_nus = np.abs(np.log10(nus))
 
     fig, axs = plt.subplots(1, 4, figsize=(12,3))
+    
     axs[0].hist(log_nus)
     axs[0].set(xlabel='new nu dist', ylabel='Frequency')
 
@@ -287,4 +288,4 @@ results_file = './referee_changes/JANUARY_FINAL_RESULTS/JANUARY_FINAL_RESULTS.cs
 
 #change_scaling(results_file)
 #make_qm_plot(results_file, [0.45,0.87], '')
-make_scaled_qm_plot(results_file, [0.45,0.87], '')
+make_qm_plot(results_file, [0.45,0.87], '')
